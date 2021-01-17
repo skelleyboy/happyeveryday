@@ -8,24 +8,40 @@
          <meta name="viewport" content="width=device-width, initial-scale=1">
         <STYLE>
             body {background: black; color: #fff;}
-            *{font-family: 'Roboto', sans-serif; transition: all ease .2s;}
-            ul {max-width:500px; margin:auto; padding: 0px; font-size: 5vw;list-style-position: inside;}
-            li {border-bottom:1px solid #333;padding: 30px;  margin: 0px 0px 10px 0px;}
-            li:
+            *{font-family: 'Nunito', sans-serif; transition: all ease .2s;}
+            ul {list-style: none;max-width:500px; margin:auto; padding: 0px; font-size: 5vw;list-style-position: inside;}
+            ul li::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+            li {border-bottom:1px solid #333;padding: 10px 30px;  margin: 0px 0px 10px 0px;}
+            .do li:before {  color:#00ff00;}
+            
+            .dont li:before {color:red;}
+            .dont {margin-top: 50px;}
         </STYLE>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
     </head>
     <body>
         
         
         
-    <UL>
-        <LI>Be present</LI>
-    </UL>
         
-    <UL>
-        <LI>Be present</LI>
-    </UL>
+            <UL class="do">
+        <LI>Be physically active</LI>
+<li>Be present and meditate</li>
+<li>Devote time to family and friends</li>
+<li>Practice gratitude</li>
+    </ul>
+        
+        
+            <UL class="dont">
+        <li>Drink on weekdays</li>
+            <li>Avoid eye contact</li>
+    </ul>
 </body>
 </html>
