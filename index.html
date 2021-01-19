@@ -67,7 +67,7 @@ label{
   cursor: pointer;
   transition: all 0.7s ease;
   position: relative;
-  padding: 5px 60px 5px  20px;
+  padding: 0px 60px 0px  20px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -87,7 +87,8 @@ label:before{
   position: absolute;
   border-radius: 100%;
   right: 20px;
-  top: 30%;
+  top: 0px;
+    bottom:0px;
   transition: border 0.7s ease
 }
 #label-1:checked ~ label[for=label-1],
@@ -120,10 +121,25 @@ label:before{
 }
             
             
+                 @media only screen and (min-width: 600px) {
+                 h2 {font-size: 2vw;}
+                 
+}
     
             
-             @media only screen and (min-width: 600px) {
+                             @media only screen and (min-width: 768px) {
+                 h2 {font-size: 4vw;}
+                 
+}
+    
+            
+             @media only screen and (min-width: 1024px) {
+                 h2 {font-size: 2vw;}
+                 .tasks {margin-top:100px;}
+}
+                         @media only screen and (min-width: 1280px) {
                  h2 {font-size: 1vw;}
+                 .tasks {margin-top:100px;}
 }
             
         </STYLE>
