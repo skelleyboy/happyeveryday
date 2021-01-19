@@ -11,7 +11,99 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <STYLE>
+            
+            /* tiny reset */
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+}
+/* body */
+body{
+  font-family: sans-serif;
+}
+/* title */
+h1{
+  color: #aa8e8d;
+  text-align: center;
+  font-weight: 900;
+}
+            
+            h2 {font-weight: normal;font-size: 5vw}
+/* tasks */
+.tasks{
+max-width: 900px;
+  margin: 0px auto;
+}
+input[type=checkbox] {
+  display: none;
+}
+label{
+  display: block;
+  border-bottom: 1px solid #666;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  position: relative;
+  padding: 5px 60px 5px  20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+label h2 span{
+  display: block;
+  text-transform: capitalize;
+  font-weight: normal;
+  color: #fff;
+}
+label:before{
+  content:"";
+  width: 20px;
+  height: 20px;
+  background: red;
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  right: 20px;
+  top: 30%;
+  transition: border 0.7s ease
+}
+#label-1:checked ~ label[for=label-1],
+#label-2:checked ~ label[for=label-2],
+#label-3:checked ~ label[for=label-3],
+#label-4:checked ~ label[for=label-4],
+#label-5:checked ~ label[for=label-5],
+            #label-6:checked ~ label[for=label-6],
+#label-7:checked ~ label[for=label-7]{
+  color: #666;
+}
+#label-1:checked ~ label[for=label-1] h2 span,
+#label-2:checked ~ label[for=label-2] h2 span,
+#label-3:checked ~ label[for=label-3] h2 span,
+#label-4:checked ~ label[for=label-4] h2 span,
+#label-5:checked ~ label[for=label-5] h2 span,
+#label-6:checked ~ label[for=label-6] h2 span,
+#label-7:checked ~ label[for=label-7] h2 span{
+  color: #f6bd66;
+}
+#label-1:checked ~ label[for=label-1]:before,
+#label-2:checked ~ label[for=label-2]:before,
+#label-3:checked ~ label[for=label-3]:before,
+#label-4:checked ~ label[for=label-4]:before,
+#label-5:checked ~ label[for=label-5]:before,
+#label-6:checked ~ label[for=label-6]:before,
+#label-7:checked ~ label[for=label-7]:before
+            {
+  background: lime;
+}
+            
+            
             body {background: black; color: #fff;}
+            a {color:#fff; text-decoration: none;}
+            a:visited {background: red;}
             *{font-family: 'Nunito', sans-serif; transition: all ease .2s;}
             ul {list-style: none;max-width:800px; margin:auto; padding: 0px; font-size: 5vw;list-style-position: inside;}
             ul li::before {
@@ -22,6 +114,8 @@
               margin-left: -1em;
             }
             li {border-bottom:1px solid #333;padding: 10px 30px;  margin: 0px 0px 10px 0px;}
+            
+            ul li:focus {background-color:red;}
             .do li:before {  color:#00ff00;}
             
             .dont li:before {color:red;}
@@ -32,34 +126,63 @@
 }
             
         </STYLE>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDBSL6RQJP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-VDBSL6RQJP');
-</script>
-    </head>
-    <body>
+  
         
-        
-    <UL class="do">
-        <LI>Be physically active</LI>
-        <li>Be present and meditate</li>
-        <LI>Drink 3-4 liters of water</LI>
-        <li>Practice gratitude and optimism</li>
-        <li>Devote time to family and friends</li>
-        <li>Get minimum of 7 hours of sleep</li>
-        <li>Savor time and experiences not money and things</li>
-    </UL>
-        
-        <!--
-            <UL class="dont">
-     
-    </ul>-->
+        <div class="tasks">
+  <!-- title -->
+  <!-- task 1 -->
+  <input id='label-1' type='checkbox' checked/>
+  <label for='label-1'>
+    <h2>Be physically active
+      <!--<span>test</span>-->
+    </h2>   
+  </label>
+  <!-- task 2 -->
+  <input id='label-2' type='checkbox' checked/>
+  <label for='label-2'>
+    <h2>Be present and meditate
+    </h2>   
+  </label>
+  <!-- task 3 -->
+  <input id='label-3' type='checkbox'/>
+  <label for='label-3'>
+    <h2>Drink 3-4 liters of water
+    </h2>   
+  </label>
+  <!-- task 4 -->
+  <input id='label-4' type='checkbox'/>
+  <label for='label-4'>
+    <h2>Practice gratitude and optimism
+    </h2>   
+  </label>
+  <!-- task 5 -->
+  <input id='label-5' type='checkbox'/>
+  <label for='label-5'>
+    <h2>Devote time to family and friends
+    </h2>   
+  </label>
+  <!-- task 6 -->
+  <input id='label-6' type='checkbox'/>
+  <label for='label-6'>
+    <h2>Get minimum of 7 hours of sleep
+    </h2>   
+  </label>
+            
+  <!-- task 7 -->
+  <input id='label-7' type='checkbox'/>
+  <label for='label-7'>
+    <h2>Savor time and experiences not money and things
+    </h2>   
+  </label>
+</div>
 </body>
 </html>
