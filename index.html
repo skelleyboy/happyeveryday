@@ -11,6 +11,25 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <STYLE>
+             body {background: black; color: #fff;}
+            a {color:#fff; text-decoration: none;}
+            a:visited {background: red;}
+            *{font-family: 'Nunito', sans-serif;}
+            ul {list-style: none;max-width:800px; margin:auto; padding: 0px; font-size: 5vw;list-style-position: inside;}
+            ul li::before {
+              content: "\2022";
+              font-weight: bold;
+              display: inline-block; 
+              width: 1em;
+              margin-left: -1em;
+            }
+            li {border-bottom:1px solid #333;padding: 10px 30px;  margin: 0px 0px 10px 0px;}
+            
+            ul li:focus {background-color:red;}
+            .do li:before {  color:#00ff00;}
+            
+            .dont li:before {color:red;}
+            .dont {margin-top: 40px;}
             
             /* tiny reset */
 html, body {
@@ -101,25 +120,7 @@ label:before{
 }
             
             
-            body {background: black; color: #fff;}
-            a {color:#fff; text-decoration: none;}
-            a:visited {background: red;}
-            *{font-family: 'Nunito', sans-serif; transition: all ease .2s;}
-            ul {list-style: none;max-width:800px; margin:auto; padding: 0px; font-size: 5vw;list-style-position: inside;}
-            ul li::before {
-              content: "\2022";
-              font-weight: bold;
-              display: inline-block; 
-              width: 1em;
-              margin-left: -1em;
-            }
-            li {border-bottom:1px solid #333;padding: 10px 30px;  margin: 0px 0px 10px 0px;}
-            
-            ul li:focus {background-color:red;}
-            .do li:before {  color:#00ff00;}
-            
-            .dont li:before {color:red;}
-            .dont {margin-top: 40px;}
+    
             
              @media only screen and (min-width: 600px) {
                  h2 {font-size: 1vw;}
