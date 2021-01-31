@@ -34,7 +34,18 @@
             .dont li:before {color:red;}
             .dont {margin-top: 40px;}
             .topLists {padding: 0px 0px 0px 0px; list-style-position: inside;}
-            .topLists input {-webkit-appearance: none; background: transparent;border:0px;  border-bottom:1px solid #ccc;  width: calc(100% - 40px); font-size: 20px; color:white; height: 40px; margin: 0px 0px 0px 0px;}
+             .topLists input:focus, .topLists textarea:focus {
+border-bottom: 1px solid white !important;
+box-shadow: 0 0 0px !important;
+-moz-box-shadow: 0 0   !important;
+-webkit-box-shadow: 0 0  !important;
+}
+
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
+}
+            .topLists input {-webkit-appearance: none; outline: none; background: transparent;border:0px;  border-bottom:1px solid #666;  width: calc(100% - 40px); font-size: 20px; color:white; height: 40px; margin: 0px 0px 0px 0px;}
             .listContainer {padding: 0px 0px 0px 0px;}
             .custom-counter {
   margin: 0;
