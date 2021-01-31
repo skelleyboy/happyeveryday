@@ -24,18 +24,18 @@
               margin-left: -1em;
             }
             .pageContainer {max-width:800px; margin:auto; padding: 10px;}
-            .tag {display: inline-block; padding: 5px 20px; margin: 0px 0px 10px 0px; background: orange; font-size: 12px; border-radius: 55px; text-transform: uppercase; font-weight: bold; letter-spacing: 2px;}
-            .card {padding: 20px; margin-bottom:30px; border:1px solid #ccc; border-radius: 9px;}
+            .tag {display: inline-block; color:orange; padding: 0px; margin: 0px 0px 10px 0px; font-size: 14px; text-transform: uppercase; font-weight: bold; letter-spacing: 2px;}
+            .card {padding: 20px; margin-bottom:30px; border:1px solid #666; border-radius: 9px;}
             .tasks li {border-bottom:1px solid #333;padding: 10px 30px;  margin: 0px 0px 10px 0px;}
             
-            ul li:focus {background-color:red;}
+            ul li:focus {background-color:crimson;}
             .do li:before {  color:#00ff00;}
             
             .dont li:before {color:red;}
             .dont {margin-top: 40px;}
             .topLists {padding: 0px 0px 0px 0px; list-style-position: inside;}
-            .topLists input {background: transparent;border:0px;  border-bottom:1px solid #ccc;  width: calc(100% - 50px); font-size: 24px; color:white; height: 40px; margin: 0px 0px 0px 0px;}
-            .listContainer {padding: 0px 0px 0px 10px;}
+            .topLists input {-webkit-appearance: none; background: transparent;border:0px;  border-bottom:1px solid #ccc;  width: calc(100% - 40px); font-size: 20px; color:white; height: 40px; margin: 0px 0px 0px 0px;}
+            .listContainer {padding: 0px 0px 0px 0px;}
             .custom-counter {
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@
   content: counter(step-counter);
   margin-right: 5px;
   font-size: 80%;
-  background-color: rgb(0,200,200);
+  border:1px solid white;
   color: white;
   font-weight: bold;
   padding: 3px 8px;
@@ -71,7 +71,7 @@ body{
 }
 /* title */
 h1{
-font-size: 7vw; padding: 0px 0px; 
+font-size: 7vw; padding: 0px 0px; margin: 10px 0px; 
 }
             
 h2 {font-weight: normal;font-size: 5vw; padding: 0px;}
@@ -108,7 +108,7 @@ label:before{
   content:"";
   width: 20px;
   height: 20px;
-  background: red;
+  background: firebrick;
   display: block;
   position: absolute;
   border-radius: 100%;
@@ -144,8 +144,7 @@ label:before{
 #label-7:checked ~ label[for=label-7]:before
             {
 
-background: rgb(100,252,70);
-background: linear-gradient(90deg, rgba(100,252,70,1) 0%, rgba(0,150,145,1) 100%); 
+background: greenyellow; 
 }
             
             
@@ -175,7 +174,7 @@ background: linear-gradient(90deg, rgba(100,252,70,1) 0%, rgba(0,150,145,1) 100%
 }
             
         </STYLE>
-        
+        <script src="https://kit.fontawesome.com/40181e3079.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -189,7 +188,7 @@ background: linear-gradient(90deg, rgba(100,252,70,1) 0%, rgba(0,150,145,1) 100%
          
          <DIV CLASS="pageContainer">
 <DIV CLASS="card">
-    <SPAN CLASS="tag">good morning!</SPAN>
+    <SPAN CLASS="tag"><i class="fas fa-sun"></i> good morning!</SPAN>
         <h1>3 Things You Are Grateful For:</h1>
          <DIV CLASS="listContainer">
          <OL CLASS="topLists custom-counter">
