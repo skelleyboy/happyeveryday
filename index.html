@@ -23,7 +23,7 @@
               width: 1em;
               margin-left: -1em;
             }
-            .pageContainer {max-width:800px; margin:auto; padding: 10px;}
+            .pageContainer {margin:auto; padding: 10px;}
             .tag {display: inline-block; color:white; padding: 0px; margin: 0px 0px 10px 0px; font-size: 18px; letter-spacing: 2px font-weight: bold; }
             .card i {font-size: 24px; margin-right: 5px;}
             .card {padding: 20px; background-color: rgba(255,255,255,.1);margin-bottom:10px; border-top:1px solid rgba(255,255,255,.1); border-radius: 9px;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -180,6 +180,9 @@ background: greenyellow;
     
             
              @media only screen and (min-width: 1024px) {
+                 .column {width:20vw;}
+                 .columnLeft {float:left;}
+                 .columnRight {float:right;}
                  label {padding: 0px 60px 0px  0px;}
                  h2 {font-size: 2vw;}
                     h1 {font-size: 3vw; margin-top: 0px;}
@@ -187,7 +190,7 @@ background: greenyellow;
 }
                          @media only screen and (min-width: 1280px) {
                  h2 {font-size: 2vw;}
-                 .tasks {margin-top:100px;}
+                 .tasks {margin-top:70px;}
 }
             
         </STYLE>
@@ -204,6 +207,8 @@ background: greenyellow;
      <body>  
          
          <DIV CLASS="pageContainer">
+             
+            <div class="column columnLeft">
 <DIV CLASS="card">
     <SPAN CLASS="tag"><i class="fas fa-sun" style="color: darkorange"></i> Things You Are Grateful For:</SPAN>
          <DIV CLASS="listContainer">
@@ -232,9 +237,10 @@ background: greenyellow;
              </DIV>
     </DIV>
              
+         </div>
              
              
-             
+           <div class="column columnRight">  
              <DIV CLASS="card">
     <SPAN CLASS="tag"><i class="fas fa-magic" style="color: mediumslateblue"></i> Amazing things that happened today:</SPAN>
        
@@ -260,7 +266,9 @@ background: greenyellow;
          </OL>
              </DIV>
          </DIV>
-  
+             </div>
+             
+             
         
         <div class="tasks">
   <!-- title -->
