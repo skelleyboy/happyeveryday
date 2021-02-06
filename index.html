@@ -11,7 +11,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <STYLE>
-            body {background: black; color: #fff; padding: 10px; margin: 10px;}
+            body {background-color: #333; color: #fff; padding: 10px; margin: 10px;}
             a {color:#fff; text-decoration: none;}
             a:visited {background: red;}
             *{font-family: 'Nunito', sans-serif;}
@@ -24,8 +24,14 @@
               margin-left: -1em;
             }
             .pageContainer {max-width:800px; margin:auto; padding: 10px;}
-            .tag {display: inline-block; color:orange; padding: 0px; margin: 0px 0px 10px 0px; font-size: 14px; text-transform: uppercase; font-weight: bold; letter-spacing: 2px;}
-            .card {padding: 20px; margin-bottom:30px; border:1px solid #666; border-radius: 9px;}
+            .tag {display: inline-block; color:white; padding: 0px; margin: 0px 0px 10px 0px; font-size: 18px; letter-spacing: 2px font-weight: bold; }
+            .card i {font-size: 24px; margin-right: 5px;}
+            .card {padding: 20px; background-color: rgba(255,255,255,.1);margin-bottom:10px; border-top:1px solid rgba(255,255,255,.1); border-radius: 9px;  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;}
+            .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+           
             .tasks li {border-bottom:1px solid #333;padding: 10px 30px;  margin: 0px 0px 10px 0px;}
             
             ul li:focus {background-color:crimson;}
@@ -90,7 +96,7 @@ h2 {font-weight: normal;font-size: 5vw; padding: 0px;}
 /* tasks */
 .tasks{
 max-width: 900px;
-  margin: 0px auto;
+  margin: 30px auto;
 }
 input[type=checkbox] {
   display: none;
@@ -199,8 +205,7 @@ background: greenyellow;
          
          <DIV CLASS="pageContainer">
 <DIV CLASS="card">
-    <SPAN CLASS="tag"><i class="fas fa-sun"></i> good morning!</SPAN>
-        <h1>3 Things You Are Grateful For:</h1>
+    <SPAN CLASS="tag"><i class="fas fa-sun" style="color: darkorange"></i> Things You Are Grateful For:</SPAN>
          <DIV CLASS="listContainer">
          <OL CLASS="topLists custom-counter">
          <LI><input type="text" id="gratefulOne"></LI>
@@ -209,8 +214,52 @@ background: greenyellow;
             
          </OL>
              </DIV>
+         </DIV>
+             
+             
+             
+             <DIV CLASS="card">
+    <SPAN CLASS="tag"><i class="fas fa-star" style="color: crimson"></i> Most Important Tasks:</SPAN>
+         <DIV CLASS="listContainer">
+         <OL CLASS="topLists custom-counter">
+         <LI><input type="text" id="mitOne"></LI>
+             <LI><input type="text" id="mitTwo"></LI>
+             <LI><input type="text" id="mitThree"></LI>
+              <LI><input type="text" id="mitlFour"></LI>
+             <LI><input type="text" id="mitFive"></LI>
+            
+         </OL>
+             </DIV>
     </DIV>
+             
+             
+             
+             
+             <DIV CLASS="card">
+    <SPAN CLASS="tag"><i class="fas fa-magic" style="color: mediumslateblue"></i> Amazing things that happened today:</SPAN>
+       
+         <DIV CLASS="listContainer">
+         <OL CLASS="topLists custom-counter">
+         <LI><input type="text" id="gratefulOne"></LI>
+             <LI><input type="text" id="gratefulTwo"></LI>
+             <LI><input type="text" id="gratefulThree"></LI>
+            
+         </OL>
+             </DIV>
+         </DIV>
 
+             
+                          <DIV CLASS="card">
+    <SPAN CLASS="tag"><i class="fas fa-smile-wink" style="color: yellow"></i> How could I have made today better?</SPAN>
+       
+         <DIV CLASS="listContainer">
+         <OL CLASS="topLists custom-counter">
+         <LI><input type="text" id="gratefulOne"></LI>
+        
+            
+         </OL>
+             </DIV>
+         </DIV>
   
         
         <div class="tasks">
